@@ -40,7 +40,6 @@ export default function Home() {
         setError(true);
         return;
       }
-      console.log({ res });
       if (typeof window !== "undefined") {
         sessionStorage.setItem("user", true);
       }
