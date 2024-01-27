@@ -29,13 +29,16 @@ export default function PrHandler() {
   const [loading, setLoading] = useState(true);
 
   // Get user session from sessionStorage if available
-  const userSession =
-    typeof window !== "undefined" ? sessionStorage.getItem("user") : null;
 
   // If no user, redirect to signup
-  if (!user && !userSession) {
-    router.push("/signup");
-  }
+  useEffect(() => {
+    const userSession =
+      typeof window !== "undefined" ? sessionStorage.getItem("user") : null;
+
+    if (!user && !userSession) {
+      router.push("/signup");
+    }
+  }, []);
 
   // Fetch PRs when user changes
   useEffect(() => {

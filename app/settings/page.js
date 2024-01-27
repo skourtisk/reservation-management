@@ -30,12 +30,13 @@ export default function Home() {
   const [error, setError] = useState(false);
 
   // Check if user is logged in, if not redirect to signup page
-  const userSession =
-    typeof window !== "undefined" ? sessionStorage.getItem("user") : null;
-  if (!user && !userSession) {
-    router.push("/signup");
-  }
-
+  useEffect(() => {
+    const userSession =
+      typeof window !== "undefined" ? sessionStorage.getItem("user") : null;
+    if (!user && !userSession) {
+      router.push("/signup");
+    }
+  }, []);
   // Function to handle photo change
   const handlePhotoChange = async () => {
     try {
