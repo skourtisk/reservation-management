@@ -33,7 +33,7 @@ export function DialogShow(props) {
         <DialogHeader>
           <DialogTitle>Reservations</DialogTitle>
           <DialogDescription>
-            {pr.name}'s reservations
+            {pr.name}`&apos;`s reservations
           </DialogDescription>
         </DialogHeader>
        

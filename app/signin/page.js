@@ -4,27 +4,22 @@ import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { auth, provider } from "@/app/firebase/config";
-import { useRouter } from "next/router"; // Corrected from "next/navigation"
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
 import { signInWithPopup } from "firebase/auth";
+import { provider } from "@/app/firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Home() {
-  // State variables
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-
-  // Firebase hooks
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const router = useRouter();
   const [user] = useAuthState(auth);
 
-  // Next.js router
-  const router = useRouter();
-
-  // Function to handle Google sign in
   const handleSignInGoogle = async () => {
     try {
       const res = await signInWithPopup(auth, provider);
@@ -38,7 +33,6 @@ export default function Home() {
     }
   };
 
-  // Function to handle email and password sign in
   const handleSignIn = async () => {
     try {
       const res = await signInWithEmailAndPassword(email, password);
@@ -58,7 +52,6 @@ export default function Home() {
       console.error(e);
     }
   };
-
   return (
     <main className="bg-[#26313c] h-screen flex items-center justify-center p-10">
       <div className="grid w-full h-full grid-cols-1 bg-white md:grid-cols-2">
@@ -121,7 +114,7 @@ export default function Home() {
           </div>
 
           <p className="mt-4 text-s text-slate-400">
-            Don't have an account?{" "}
+            Don`&apos;`t have an account?
             <a
               className="text-indigo-500"
               href="#"
