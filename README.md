@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PR Management System
 
-## Getting Started
+This is a comprehensive PR Management System built with Next.js, Tailwind CSS, Zustand, and Shadcn. It features a robust authentication system using firebase Auth, account creation, PR management, reservation editing, and a fully functional settings page. For a Database it uses Firebase Firestore.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **User Authentication and Account Creation**: Securely sign up new users and authenticate existing ones(either with email and password or Google Sign in). Uses Firebase Auth
+- **PR Management**: Add and manage PRs with ease. (State management and adding/removing/editing/retreiving items in the database)
+- **Dashboard**: View total reservations, money owed, and total people at a glance. (Mostly state management and fetching from Database)
+- **Settings Page**: Manage your username, email, password, and profile photo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Key Files
 
-## Learn More
+- `app/prmanagement/page.js`: Contains the logic for PR management.
+- `components/Pr.js`: Defines the PR component.
+- `components/sortReservations.js`: Contains the logic for sorting reservations.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository.
+2. Run `npm install` to install the dependencies.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Env file not included so either edit firebase config directly or make an env file.
 
-## Deploy on Vercel
+## Running the Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To run the project, use the command `npm run dev`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+Contributions are welcome. Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
