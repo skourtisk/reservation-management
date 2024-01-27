@@ -22,7 +22,7 @@ This is a comprehensive PR Management System built with Next.js, Tailwind CSS, Z
 1. Clone the repository.
 2. Run `npm install` to install the dependencies.
 
-Env file not included so either edit firebase config directly or make an env file.
+add your own env file 
 
 ## Running the Project
 
