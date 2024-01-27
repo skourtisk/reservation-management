@@ -160,7 +160,10 @@ export default function Home() {
       </div>
       {loading ? (
         <div className="flex justify-center items-center h-screen">
-          <Skeleton className=" ml-[600px] w-[100px] h-[100px]" rounded-full />
+          <Skeleton
+            className=" ml-[600px] w-[100px] h-[100px]"
+            rounded-full="true"
+          />
         </div>
       ) : (
         <div className=" flex flex-col justify-center items-center  bg-slate-200">

@@ -13,7 +13,7 @@ import { RiReservedLine } from "react-icons/ri";
 import { updateProfile } from "firebase/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { IoIosSettings } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { updatePassword } from "firebase/auth";
 import { updateEmail } from "firebase/auth";
