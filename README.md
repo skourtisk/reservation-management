@@ -3,7 +3,7 @@
 This is a comprehensive PR Management System built with Next.js, Tailwind CSS, Zustand, and Shadcn. It features a robust authentication system using firebase Auth, account creation, PR management, reservation editing, and a fully functional settings page. For a Database it uses Firebase Firestore.
 
 Demo: https://reservation-management-a0kqsrz2p-kostis14.vercel.app/signin
-(Google sign in currently not working on production)
+
 
 
 ## Features
